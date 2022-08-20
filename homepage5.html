@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #B85042;
+  padding: 50px 10px;
+  transition: 0.5s;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 45px;
+  font-weight: bold;
+  transition: 0.4s;
+  text-align: center;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #201E20;
+  color: white;
+  margin: 10px;
+ }
+#navbar a.active:hover{
+    background-color: #ddd;
+}
+#navbar-right {
+  float: right;
+  padding: 0px;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #A7BEAE;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 32px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #B85042;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  color: #ff0000;
+  top: 0px;
+  right: 25px;
+  font-size: 45px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  margin: 0px 0px 00px 10px;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 60px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .search{
+    width: 100%;
+}
+
+.topnav input[type=text] {
+  width: 100%;
+  padding: 20px 50px 0px 0px;
+  margin-top: 0px;
+  font-size: 30px;
+  border: none;
+}
+
+.topnav .search button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 0px;
+  margin-right: 0px;
+  background: #ddd;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <div id="navbar">
+    <a><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
+    <a href="#default" id="logo" style="text-align:center">Hosteler's life</a>
+    <div id="navbar-right">
+      <a class="active" href="login_temp.html">login</a>
+      <a class="active" href="#contact">sign up</a>
+      
+    </div>
+  </div>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a><div class="search"><form>
+        <input type="text" placeholder="Search your university/college name Here....." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form></div></a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    
+  </div>
+
+  
+  <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+    <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
+    <p>Scroll down this frame to see the effect!</p>
+    <p>Scroll to the top to remove the effect.</p>
+    <p><b>Note:</b> We have also made the navbar responsive, resize the browser window to see the effect.</p>
+    <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "25px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "60px 10px";
+    document.getElementById("logo").style.fontSize = "45px";
+  }
+}
+function scrollFunction2() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("topnav").style.padding = "25px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("topnav").style.padding = "60px 10px";
+    document.getElementById("logo").style.fontSize = "45px";
+  }
+}
+
+
+
+
+</script>
+   
+</body>
+</html> 

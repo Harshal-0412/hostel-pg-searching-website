@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 80%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  top: 50px;
+  left: 300px;
+  background-color: #111;
+}
+
+.right {
+  top:50px;
+  right: 300px;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}.dropbtn3{
+  padding:20px;
+  margin:5px 20px;
+  background-color: rgb(27, 130, 194);
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <img src="img_avatar2.png" alt="Avatar woman">
+    <h2>STUDENT / EMPLOYEE LOGIN</h2>
+    <p>student / employee need to click on the below button to get log in the website</p><br>
+    <a href="http://localhost/login_user/logint.php" style="color:aliceblue; padding:20px;background-color:rgb(37, 216, 145);cursor:pointer;">login for Users</a>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="img_avatar.png" alt="Avatar man">
+    <h2>OWNER / CARETAKER LOGIN</h2>
+    <p>hostel/pg/flat owner/caretaker need to click on the below button to get log in the website</p><br>
+    <a href="http://localhost/login_owner/login_owner2.php" style="color:aliceblue;padding:20px;background-color:blue;cursor:pointer;">login for owner</a>
+  </div>
+</div>
+     
+</body>
+</html> 
