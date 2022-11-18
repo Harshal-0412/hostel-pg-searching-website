@@ -1,0 +1,13 @@
+.bar {
+    overflow: hidden;
+    background-color: #40a5dc;
+    padding: 0px 00px;
+    transition: 0.8s;
+    position: sticky;
+    width: 100%;
+    top: 0px;
+    
+  }
+  * {
+    box-sizing: border-box;
+  }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login page</title>
+    </head>
+    <style>
+        body 
+        {
+          font-family: Arial;
+  color: white;
+}
+input[type=text], input[type=text], input[type=password], input[type=number], input[type=radio] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+.container {
+  padding: 40px;
+  text-align: left;
+  margin: 30px;
+}
+.split {
+  height: 65%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 385px;
+  top: 100px;
+  background-color: rgb(255, 111, 44);
+}
+.middle{
+  left: 800px;
+  top: 100px;
+}
+
+.right {
+  right: 385px;
+  top: 100px;
+  background-color: rgb(0, 0, 0);
+}
+
+.centered {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centereds img {
+  width: 700px;
+   height: 555px;
+}
+    </style>
+    <body>
+        <div class="split right">
+            <div class="centereds">
+              <label for="uname1"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname1" required>
+        
+              <label for="pwd"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="pwd" required>
+
+              
+            </div>
+          </div>
+          <div class="split middle">
+            <div class="centereds">
+              <img src="img_avatar.png" alt="Avatar woman">
+              
+            </div>
+          </div>
+          <div class="split left">
+            <div class="centered">
+                <div class="container">
+                    <h1 style="text-align: center; padding: 0px 80px 0px 0px;">Register page</h1>
+                    <label for="uname"><b>Name</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+              
+                    <p><b>Gender</b></p>
+                    <label for="gender"><b>male</b></label>
+                    <input type="radio" name="gender" required>
+                    <label for="gender"><b>female</b></label>
+                    <input type="radio" name="gender" required>
+                    <label for="gender"><b>other</b></label>
+                    <input type="radio" name="gender" required>
+
+                    <label for="age"><b>Age</b></label>
+                    <input type="number" placeholder="enter age" title="enter valid number" min="12" name="age" required>
+
+                    <label for="number"><b>Phone number</b></label>
+                    <input type="number" placeholder="enter Phone number" min="1000000000" max="9999999999" name="number" required>
+                                  
+                    <button type="submit">Register</button>
+                    
+                  </div>
+          </div>
+    </body>
+</html>
